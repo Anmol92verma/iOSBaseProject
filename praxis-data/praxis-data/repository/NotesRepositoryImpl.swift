@@ -22,7 +22,7 @@ public struct NotesRepositoryImpl : NotesRepository{
     public  func getNotes() -> AnyPublisher<[Note],NSError> {
         let request: NSFetchRequest<NoteEntity> = NSFetchRequest<NoteEntity>(entityName: "NoteEntity")
         return CoreDataStore.publisher(fetch: request).map { notesEntity in
-            
+            print(notesEntity.count)
            return notesEntity.map({ NoteEntity in
                 return mapper.mapToDomain(data: NoteEntity)
             })

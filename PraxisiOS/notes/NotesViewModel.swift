@@ -14,6 +14,7 @@ class NotesVM : ObservableObject{
     
     @Published var notes :[Note] = []
     var bag: [AnyCancellable] = []
+    var fetchCancellable : AnyCancellable? = nil
 
     let notesRepo : NotesRepository = NotesRepositoryImpl(entityMapper: NoteEntityMapper())
     
@@ -22,7 +23,7 @@ class NotesVM : ObservableObject{
                   .sink(receiveCompletion: { err in
                   
               }, receiveValue: { isSaved in
-                  
+                  self.fetchNotes()
               }).store(in: &bag)
     }
     
@@ -32,11 +33,13 @@ class NotesVM : ObservableObject{
     }
                                 
     func fetchNotes(){
-     UseCaseFetchNotes(notesRepository : notesRepo).performStreaming(param: nil).receive(on: DispatchQueue.main)
+    fetchCancellable?.cancel()
+    fetchCancellable =  UseCaseFetchNotes(notesRepository : notesRepo).performStreaming(param: nil).receive(on: DispatchQueue.main)
             .sink(receiveCompletion: { err in
             
         }, receiveValue: { newNotes in
             self.notes = newNotes
-        }).store(in: &bag)
+        })
+        fetchCancellable?.store(in: &bag)
     }
 }
