@@ -1,0 +1,511 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		899F950D27B50B3300BFC9FA /* praxis_domain.docc in Sources */ = {isa = PBXBuildFile; fileRef = 899F950C27B50B3300BFC9FA /* praxis_domain.docc */; };
+		899F951327B50B3300BFC9FA /* praxis_domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 899F950827B50B3300BFC9FA /* praxis_domain.framework */; };
+		899F951827B50B3300BFC9FA /* praxis_domainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899F951727B50B3300BFC9FA /* praxis_domainTests.swift */; };
+		899F951927B50B3300BFC9FA /* praxis_domain.h in Headers */ = {isa = PBXBuildFile; fileRef = 899F950B27B50B3300BFC9FA /* praxis_domain.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		899F952327B50B4E00BFC9FA /* BaseUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899F952227B50B4E00BFC9FA /* BaseUseCase.swift */; };
+		899F956727B50D6500BFC9FA /* UseCaseSaveNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899F956627B50D6500BFC9FA /* UseCaseSaveNote.swift */; };
+		899F957327B512C700BFC9FA /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899F957227B512C700BFC9FA /* Note.swift */; };
+		899F957727B513A700BFC9FA /* NotesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899F957627B513A700BFC9FA /* NotesRepository.swift */; };
+		899F959627B52DBF00BFC9FA /* UseCaseFetchNotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899F959527B52DBF00BFC9FA /* UseCaseFetchNotes.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		899F951427B50B3300BFC9FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 899F94FF27B50B3300BFC9FA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 899F950727B50B3300BFC9FA;
+			remoteInfo = "praxis-domain";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		899F950827B50B3300BFC9FA /* praxis_domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = praxis_domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		899F950B27B50B3300BFC9FA /* praxis_domain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = praxis_domain.h; sourceTree = "<group>"; };
+		899F950C27B50B3300BFC9FA /* praxis_domain.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = praxis_domain.docc; sourceTree = "<group>"; };
+		899F951227B50B3300BFC9FA /* praxis-domainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "praxis-domainTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		899F951727B50B3300BFC9FA /* praxis_domainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = praxis_domainTests.swift; sourceTree = "<group>"; };
+		899F952227B50B4E00BFC9FA /* BaseUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUseCase.swift; sourceTree = "<group>"; };
+		899F956627B50D6500BFC9FA /* UseCaseSaveNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseSaveNote.swift; sourceTree = "<group>"; };
+		899F957227B512C700BFC9FA /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		899F957627B513A700BFC9FA /* NotesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesRepository.swift; sourceTree = "<group>"; };
+		899F959527B52DBF00BFC9FA /* UseCaseFetchNotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseFetchNotes.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		899F950527B50B3300BFC9FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		899F950F27B50B3300BFC9FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				899F951327B50B3300BFC9FA /* praxis_domain.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		899F94FE27B50B3300BFC9FA = {
+			isa = PBXGroup;
+			children = (
+				899F950A27B50B3300BFC9FA /* praxis-domain */,
+				899F951627B50B3300BFC9FA /* praxis-domainTests */,
+				899F950927B50B3300BFC9FA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		899F950927B50B3300BFC9FA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				899F950827B50B3300BFC9FA /* praxis_domain.framework */,
+				899F951227B50B3300BFC9FA /* praxis-domainTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		899F950A27B50B3300BFC9FA /* praxis-domain */ = {
+			isa = PBXGroup;
+			children = (
+				899F957527B5139A00BFC9FA /* repository */,
+				899F957127B512B800BFC9FA /* model */,
+				899F956527B50D3B00BFC9FA /* usecases */,
+				899F950B27B50B3300BFC9FA /* praxis_domain.h */,
+				899F950C27B50B3300BFC9FA /* praxis_domain.docc */,
+			);
+			path = "praxis-domain";
+			sourceTree = "<group>";
+		};
+		899F951627B50B3300BFC9FA /* praxis-domainTests */ = {
+			isa = PBXGroup;
+			children = (
+				899F951727B50B3300BFC9FA /* praxis_domainTests.swift */,
+			);
+			path = "praxis-domainTests";
+			sourceTree = "<group>";
+		};
+		899F956527B50D3B00BFC9FA /* usecases */ = {
+			isa = PBXGroup;
+			children = (
+				899F952227B50B4E00BFC9FA /* BaseUseCase.swift */,
+				899F956627B50D6500BFC9FA /* UseCaseSaveNote.swift */,
+				899F959527B52DBF00BFC9FA /* UseCaseFetchNotes.swift */,
+			);
+			path = usecases;
+			sourceTree = "<group>";
+		};
+		899F957127B512B800BFC9FA /* model */ = {
+			isa = PBXGroup;
+			children = (
+				899F957227B512C700BFC9FA /* Note.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		899F957527B5139A00BFC9FA /* repository */ = {
+			isa = PBXGroup;
+			children = (
+				899F957627B513A700BFC9FA /* NotesRepository.swift */,
+			);
+			path = repository;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		899F950327B50B3300BFC9FA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				899F951927B50B3300BFC9FA /* praxis_domain.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		899F950727B50B3300BFC9FA /* praxis-domain */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 899F951C27B50B3300BFC9FA /* Build configuration list for PBXNativeTarget "praxis-domain" */;
+			buildPhases = (
+				899F950327B50B3300BFC9FA /* Headers */,
+				899F950427B50B3300BFC9FA /* Sources */,
+				899F950527B50B3300BFC9FA /* Frameworks */,
+				899F950627B50B3300BFC9FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "praxis-domain";
+			productName = "praxis-domain";
+			productReference = 899F950827B50B3300BFC9FA /* praxis_domain.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		899F951127B50B3300BFC9FA /* praxis-domainTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 899F951F27B50B3300BFC9FA /* Build configuration list for PBXNativeTarget "praxis-domainTests" */;
+			buildPhases = (
+				899F950E27B50B3300BFC9FA /* Sources */,
+				899F950F27B50B3300BFC9FA /* Frameworks */,
+				899F951027B50B3300BFC9FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				899F951527B50B3300BFC9FA /* PBXTargetDependency */,
+			);
+			name = "praxis-domainTests";
+			productName = "praxis-domainTests";
+			productReference = 899F951227B50B3300BFC9FA /* praxis-domainTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		899F94FF27B50B3300BFC9FA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					899F950727B50B3300BFC9FA = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					899F951127B50B3300BFC9FA = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 899F950227B50B3300BFC9FA /* Build configuration list for PBXProject "praxis-domain" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 899F94FE27B50B3300BFC9FA;
+			productRefGroup = 899F950927B50B3300BFC9FA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				899F950727B50B3300BFC9FA /* praxis-domain */,
+				899F951127B50B3300BFC9FA /* praxis-domainTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		899F950627B50B3300BFC9FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		899F951027B50B3300BFC9FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		899F950427B50B3300BFC9FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				899F956727B50D6500BFC9FA /* UseCaseSaveNote.swift in Sources */,
+				899F957727B513A700BFC9FA /* NotesRepository.swift in Sources */,
+				899F959627B52DBF00BFC9FA /* UseCaseFetchNotes.swift in Sources */,
+				899F952327B50B4E00BFC9FA /* BaseUseCase.swift in Sources */,
+				899F950D27B50B3300BFC9FA /* praxis_domain.docc in Sources */,
+				899F957327B512C700BFC9FA /* Note.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		899F950E27B50B3300BFC9FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				899F951827B50B3300BFC9FA /* praxis_domainTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		899F951527B50B3300BFC9FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 899F950727B50B3300BFC9FA /* praxis-domain */;
+			targetProxy = 899F951427B50B3300BFC9FA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		899F951A27B50B3300BFC9FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		899F951B27B50B3300BFC9FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		899F951D27B50B3300BFC9FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = P3R865242N;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mutualmobile.praxis-domain";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		899F951E27B50B3300BFC9FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = P3R865242N;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mutualmobile.praxis-domain";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		899F952027B50B3300BFC9FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P3R865242N;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mutualmobile.praxis-domainTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		899F952127B50B3300BFC9FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P3R865242N;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mutualmobile.praxis-domainTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		899F950227B50B3300BFC9FA /* Build configuration list for PBXProject "praxis-domain" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				899F951A27B50B3300BFC9FA /* Debug */,
+				899F951B27B50B3300BFC9FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		899F951C27B50B3300BFC9FA /* Build configuration list for PBXNativeTarget "praxis-domain" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				899F951D27B50B3300BFC9FA /* Debug */,
+				899F951E27B50B3300BFC9FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		899F951F27B50B3300BFC9FA /* Build configuration list for PBXNativeTarget "praxis-domainTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				899F952027B50B3300BFC9FA /* Debug */,
+				899F952127B50B3300BFC9FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 899F94FF27B50B3300BFC9FA /* Project object */;
+}

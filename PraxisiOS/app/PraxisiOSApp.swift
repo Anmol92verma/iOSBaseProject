@@ -6,15 +6,15 @@
 //
 
 import SwiftUI
+import praxis_data
 
 @main
 struct PraxisiOSApp: App {
-    let persistenceController = PersistenceController.shared
+    let context = NotesLocalDataSource.viewContext
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            NotesView().environment(\.managedObjectContext, context)
         }
     }
 }

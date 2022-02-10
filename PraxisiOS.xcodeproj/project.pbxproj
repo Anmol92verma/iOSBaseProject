@@ -7,15 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		460E2817B2AD0FEA0C4D9719 /* Pods_PraxisiOS_PraxisiOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E64E084727E9DBF324B2897 /* Pods_PraxisiOS_PraxisiOSUITests.framework */; };
 		899F94D027B50AD300BFC9FA /* PraxisiOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899F94CF27B50AD300BFC9FA /* PraxisiOSApp.swift */; };
-		899F94D227B50AD300BFC9FA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899F94D127B50AD300BFC9FA /* ContentView.swift */; };
+		899F94D227B50AD300BFC9FA /* NotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899F94D127B50AD300BFC9FA /* NotesView.swift */; };
 		899F94D427B50AD400BFC9FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 899F94D327B50AD400BFC9FA /* Assets.xcassets */; };
 		899F94D727B50AD400BFC9FA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 899F94D627B50AD400BFC9FA /* Preview Assets.xcassets */; };
-		899F94D927B50AD400BFC9FA /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899F94D827B50AD400BFC9FA /* Persistence.swift */; };
-		899F94DC27B50AD400BFC9FA /* PraxisiOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 899F94DA27B50AD400BFC9FA /* PraxisiOS.xcdatamodeld */; };
 		899F94E627B50AD400BFC9FA /* PraxisiOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899F94E527B50AD400BFC9FA /* PraxisiOSTests.swift */; };
 		899F94F027B50AD400BFC9FA /* PraxisiOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899F94EF27B50AD400BFC9FA /* PraxisiOSUITests.swift */; };
 		899F94F227B50AD400BFC9FA /* PraxisiOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899F94F127B50AD400BFC9FA /* PraxisiOSUITestsLaunchTests.swift */; };
+		899F958027B521C200BFC9FA /* NotesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899F957F27B521C200BFC9FA /* NotesViewModel.swift */; };
+		899F959727B52FDD00BFC9FA /* praxis_data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 899F955B27B50D1000BFC9FA /* praxis_data.framework */; };
+		899F959827B52FDD00BFC9FA /* praxis_data.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 899F955B27B50D1000BFC9FA /* praxis_data.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		899F959A27B52FDF00BFC9FA /* praxis_domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 899F952A27B50C8600BFC9FA /* praxis_domain.framework */; };
+		899F959B27B52FDF00BFC9FA /* praxis_domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 899F952A27B50C8600BFC9FA /* praxis_domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9C32B15F96E810C5618AFB50 /* Pods_PraxisiOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4C487F15D66CF1AB65D9E35 /* Pods_PraxisiOSTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,21 +38,75 @@
 			remoteGlobalIDString = 899F94CB27B50AD300BFC9FA;
 			remoteInfo = PraxisiOS;
 		};
+		899F952927B50C8600BFC9FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 899F952427B50C8600BFC9FA /* praxis-domain.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 899F950827B50B3300BFC9FA;
+			remoteInfo = "praxis-domain";
+		};
+		899F952B27B50C8600BFC9FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 899F952427B50C8600BFC9FA /* praxis-domain.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 899F951227B50B3300BFC9FA;
+			remoteInfo = "praxis-domainTests";
+		};
+		899F955A27B50D1000BFC9FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 899F955527B50D1000BFC9FA /* praxis-data.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 899F953B27B50CEE00BFC9FA;
+			remoteInfo = "praxis-data";
+		};
+		899F955C27B50D1000BFC9FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 899F955527B50D1000BFC9FA /* praxis-data.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 899F954527B50CEF00BFC9FA;
+			remoteInfo = "praxis-dataTests";
+		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		899F959927B52FDD00BFC9FA /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				899F959827B52FDD00BFC9FA /* praxis_data.framework in Embed Frameworks */,
+				899F959B27B52FDF00BFC9FA /* praxis_domain.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		3A13DBD9F039A4CD1D87C4EE /* Pods-PraxisiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PraxisiOS.debug.xcconfig"; path = "Target Support Files/Pods-PraxisiOS/Pods-PraxisiOS.debug.xcconfig"; sourceTree = "<group>"; };
+		5DBB16EA82551F2050AFB8BC /* Pods-PraxisiOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PraxisiOSTests.release.xcconfig"; path = "Target Support Files/Pods-PraxisiOSTests/Pods-PraxisiOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		8198488239ED6EA70E1C443C /* Pods-PraxisiOS-PraxisiOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PraxisiOS-PraxisiOSUITests.release.xcconfig"; path = "Target Support Files/Pods-PraxisiOS-PraxisiOSUITests/Pods-PraxisiOS-PraxisiOSUITests.release.xcconfig"; sourceTree = "<group>"; };
 		899F94CC27B50AD300BFC9FA /* PraxisiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PraxisiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		899F94CF27B50AD300BFC9FA /* PraxisiOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PraxisiOSApp.swift; sourceTree = "<group>"; };
-		899F94D127B50AD300BFC9FA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		899F94D127B50AD300BFC9FA /* NotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesView.swift; sourceTree = "<group>"; };
 		899F94D327B50AD400BFC9FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		899F94D627B50AD400BFC9FA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		899F94D827B50AD400BFC9FA /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		899F94DB27B50AD400BFC9FA /* PraxisiOS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PraxisiOS.xcdatamodel; sourceTree = "<group>"; };
 		899F94E127B50AD400BFC9FA /* PraxisiOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PraxisiOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		899F94E527B50AD400BFC9FA /* PraxisiOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PraxisiOSTests.swift; sourceTree = "<group>"; };
 		899F94EB27B50AD400BFC9FA /* PraxisiOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PraxisiOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		899F94EF27B50AD400BFC9FA /* PraxisiOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PraxisiOSUITests.swift; sourceTree = "<group>"; };
 		899F94F127B50AD400BFC9FA /* PraxisiOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PraxisiOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		899F952427B50C8600BFC9FA /* praxis-domain.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "praxis-domain.xcodeproj"; path = "praxis-domain/praxis-domain.xcodeproj"; sourceTree = SOURCE_ROOT; };
+		899F955527B50D1000BFC9FA /* praxis-data.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "praxis-data.xcodeproj"; path = "praxis-data/praxis-data.xcodeproj"; sourceTree = SOURCE_ROOT; };
+		899F957F27B521C200BFC9FA /* NotesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesViewModel.swift; sourceTree = "<group>"; };
+		899F958F27B5273700BFC9FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		9E64E084727E9DBF324B2897 /* Pods_PraxisiOS_PraxisiOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PraxisiOS_PraxisiOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CACEFA63301DCA3505FC23D4 /* Pods-PraxisiOS-PraxisiOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PraxisiOS-PraxisiOSUITests.debug.xcconfig"; path = "Target Support Files/Pods-PraxisiOS-PraxisiOSUITests/Pods-PraxisiOS-PraxisiOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E06DF37D708FCEA67CB48BB7 /* Pods-PraxisiOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PraxisiOSTests.debug.xcconfig"; path = "Target Support Files/Pods-PraxisiOSTests/Pods-PraxisiOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E8DCAF85680A6B4B2F11D62D /* Pods-PraxisiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PraxisiOS.release.xcconfig"; path = "Target Support Files/Pods-PraxisiOS/Pods-PraxisiOS.release.xcconfig"; sourceTree = "<group>"; };
+		EA273587747C46D8BB6E1409 /* Pods_PraxisiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PraxisiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4C487F15D66CF1AB65D9E35 /* Pods_PraxisiOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PraxisiOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +114,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				899F959727B52FDD00BFC9FA /* praxis_data.framework in Frameworks */,
+				899F959A27B52FDF00BFC9FA /* praxis_domain.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +123,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C32B15F96E810C5618AFB50 /* Pods_PraxisiOSTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +131,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				460E2817B2AD0FEA0C4D9719 /* Pods_PraxisiOS_PraxisiOSUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,10 +141,14 @@
 		899F94C327B50AD300BFC9FA = {
 			isa = PBXGroup;
 			children = (
+				899F952427B50C8600BFC9FA /* praxis-domain.xcodeproj */,
+				899F955527B50D1000BFC9FA /* praxis-data.xcodeproj */,
 				899F94CE27B50AD300BFC9FA /* PraxisiOS */,
 				899F94E427B50AD400BFC9FA /* PraxisiOSTests */,
 				899F94EE27B50AD400BFC9FA /* PraxisiOSUITests */,
 				899F94CD27B50AD300BFC9FA /* Products */,
+				899F952D27B50CB700BFC9FA /* Frameworks */,
+				9167D786640DE58EFB7032A0 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,11 +165,10 @@
 		899F94CE27B50AD300BFC9FA /* PraxisiOS */ = {
 			isa = PBXGroup;
 			children = (
-				899F94CF27B50AD300BFC9FA /* PraxisiOSApp.swift */,
-				899F94D127B50AD300BFC9FA /* ContentView.swift */,
+				899F958F27B5273700BFC9FA /* Info.plist */,
+				899F957C27B515F300BFC9FA /* app */,
+				899F957427B512F200BFC9FA /* notes */,
 				899F94D327B50AD400BFC9FA /* Assets.xcassets */,
-				899F94D827B50AD400BFC9FA /* Persistence.swift */,
-				899F94DA27B50AD400BFC9FA /* PraxisiOS.xcdatamodeld */,
 				899F94D527B50AD400BFC9FA /* Preview Content */,
 			);
 			path = PraxisiOS;
@@ -133,6 +199,64 @@
 			path = PraxisiOSUITests;
 			sourceTree = "<group>";
 		};
+		899F952527B50C8600BFC9FA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				899F952A27B50C8600BFC9FA /* praxis_domain.framework */,
+				899F952C27B50C8600BFC9FA /* praxis-domainTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		899F952D27B50CB700BFC9FA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EA273587747C46D8BB6E1409 /* Pods_PraxisiOS.framework */,
+				9E64E084727E9DBF324B2897 /* Pods_PraxisiOS_PraxisiOSUITests.framework */,
+				F4C487F15D66CF1AB65D9E35 /* Pods_PraxisiOSTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		899F955627B50D1000BFC9FA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				899F955B27B50D1000BFC9FA /* praxis_data.framework */,
+				899F955D27B50D1000BFC9FA /* praxis-dataTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		899F957427B512F200BFC9FA /* notes */ = {
+			isa = PBXGroup;
+			children = (
+				899F94D127B50AD300BFC9FA /* NotesView.swift */,
+				899F957F27B521C200BFC9FA /* NotesViewModel.swift */,
+			);
+			path = notes;
+			sourceTree = "<group>";
+		};
+		899F957C27B515F300BFC9FA /* app */ = {
+			isa = PBXGroup;
+			children = (
+				899F94CF27B50AD300BFC9FA /* PraxisiOSApp.swift */,
+			);
+			path = app;
+			sourceTree = "<group>";
+		};
+		9167D786640DE58EFB7032A0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3A13DBD9F039A4CD1D87C4EE /* Pods-PraxisiOS.debug.xcconfig */,
+				E8DCAF85680A6B4B2F11D62D /* Pods-PraxisiOS.release.xcconfig */,
+				CACEFA63301DCA3505FC23D4 /* Pods-PraxisiOS-PraxisiOSUITests.debug.xcconfig */,
+				8198488239ED6EA70E1C443C /* Pods-PraxisiOS-PraxisiOSUITests.release.xcconfig */,
+				E06DF37D708FCEA67CB48BB7 /* Pods-PraxisiOSTests.debug.xcconfig */,
+				5DBB16EA82551F2050AFB8BC /* Pods-PraxisiOSTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -140,9 +264,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 899F94F527B50AD400BFC9FA /* Build configuration list for PBXNativeTarget "PraxisiOS" */;
 			buildPhases = (
+				04F294C8349DBE6DBE6A7E45 /* [CP] Check Pods Manifest.lock */,
 				899F94C827B50AD300BFC9FA /* Sources */,
 				899F94C927B50AD300BFC9FA /* Frameworks */,
 				899F94CA27B50AD300BFC9FA /* Resources */,
+				899F959927B52FDD00BFC9FA /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -157,6 +283,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 899F94F827B50AD400BFC9FA /* Build configuration list for PBXNativeTarget "PraxisiOSTests" */;
 			buildPhases = (
+				1EF59646CA53D0BB119FF12F /* [CP] Check Pods Manifest.lock */,
 				899F94DD27B50AD400BFC9FA /* Sources */,
 				899F94DE27B50AD400BFC9FA /* Frameworks */,
 				899F94DF27B50AD400BFC9FA /* Resources */,
@@ -175,6 +302,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 899F94FB27B50AD400BFC9FA /* Build configuration list for PBXNativeTarget "PraxisiOSUITests" */;
 			buildPhases = (
+				085720A8628C37D0BE492C26 /* [CP] Check Pods Manifest.lock */,
 				899F94E727B50AD400BFC9FA /* Sources */,
 				899F94E827B50AD400BFC9FA /* Frameworks */,
 				899F94E927B50AD400BFC9FA /* Resources */,
@@ -223,6 +351,16 @@
 			mainGroup = 899F94C327B50AD300BFC9FA;
 			productRefGroup = 899F94CD27B50AD300BFC9FA /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 899F955627B50D1000BFC9FA /* Products */;
+					ProjectRef = 899F955527B50D1000BFC9FA /* praxis-data.xcodeproj */;
+				},
+				{
+					ProductGroup = 899F952527B50C8600BFC9FA /* Products */;
+					ProjectRef = 899F952427B50C8600BFC9FA /* praxis-domain.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				899F94CB27B50AD300BFC9FA /* PraxisiOS */,
@@ -231,6 +369,37 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		899F952A27B50C8600BFC9FA /* praxis_domain.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = praxis_domain.framework;
+			remoteRef = 899F952927B50C8600BFC9FA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		899F952C27B50C8600BFC9FA /* praxis-domainTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "praxis-domainTests.xctest";
+			remoteRef = 899F952B27B50C8600BFC9FA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		899F955B27B50D1000BFC9FA /* praxis_data.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = praxis_data.framework;
+			remoteRef = 899F955A27B50D1000BFC9FA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		899F955D27B50D1000BFC9FA /* praxis-dataTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "praxis-dataTests.xctest";
+			remoteRef = 899F955C27B50D1000BFC9FA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		899F94CA27B50AD300BFC9FA /* Resources */ = {
@@ -258,14 +427,82 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		04F294C8349DBE6DBE6A7E45 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PraxisiOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		085720A8628C37D0BE492C26 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PraxisiOS-PraxisiOSUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1EF59646CA53D0BB119FF12F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PraxisiOSTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		899F94C827B50AD300BFC9FA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				899F94DC27B50AD400BFC9FA /* PraxisiOS.xcdatamodeld in Sources */,
-				899F94D927B50AD400BFC9FA /* Persistence.swift in Sources */,
-				899F94D227B50AD300BFC9FA /* ContentView.swift in Sources */,
+				899F958027B521C200BFC9FA /* NotesViewModel.swift in Sources */,
+				899F94D227B50AD300BFC9FA /* NotesView.swift in Sources */,
 				899F94D027B50AD300BFC9FA /* PraxisiOSApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -421,6 +658,7 @@
 		};
 		899F94F627B50AD400BFC9FA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A13DBD9F039A4CD1D87C4EE /* Pods-PraxisiOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -429,6 +667,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"PraxisiOS/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PraxisiOS/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -449,6 +688,7 @@
 		};
 		899F94F727B50AD400BFC9FA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8DCAF85680A6B4B2F11D62D /* Pods-PraxisiOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -457,6 +697,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"PraxisiOS/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PraxisiOS/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -477,6 +718,7 @@
 		};
 		899F94F927B50AD400BFC9FA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E06DF37D708FCEA67CB48BB7 /* Pods-PraxisiOSTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -496,6 +738,7 @@
 		};
 		899F94FA27B50AD400BFC9FA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5DBB16EA82551F2050AFB8BC /* Pods-PraxisiOSTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -515,6 +758,7 @@
 		};
 		899F94FC27B50AD400BFC9FA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CACEFA63301DCA3505FC23D4 /* Pods-PraxisiOS-PraxisiOSUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -532,6 +776,7 @@
 		};
 		899F94FD27B50AD400BFC9FA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8198488239ED6EA70E1C443C /* Pods-PraxisiOS-PraxisiOSUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -587,19 +832,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		899F94DA27B50AD400BFC9FA /* PraxisiOS.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				899F94DB27B50AD400BFC9FA /* PraxisiOS.xcdatamodel */,
-			);
-			currentVersion = 899F94DB27B50AD400BFC9FA /* PraxisiOS.xcdatamodel */;
-			path = PraxisiOS.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 899F94C427B50AD300BFC9FA /* Project object */;
 }
