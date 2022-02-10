@@ -12,7 +12,6 @@ import CoreData
 
 public struct NotesLocalDataSource {
     
-    //3.
     static  let identifier: String  = "com.mutualmobile.praxis-data"       //Your framework bundle ID
     static   let model: String       = "praxis-data"                      //Model name
     

@@ -11,11 +11,15 @@
 		899F954627B50CEF00BFC9FA /* praxis_data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 899F953B27B50CEE00BFC9FA /* praxis_data.framework */; };
 		899F954B27B50CEF00BFC9FA /* praxis_dataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899F954A27B50CEF00BFC9FA /* praxis_dataTests.swift */; };
 		899F954C27B50CEF00BFC9FA /* praxis_data.h in Headers */ = {isa = PBXBuildFile; fileRef = 899F953E27B50CEE00BFC9FA /* praxis_data.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		899F956927B510CE00BFC9FA /* NotesLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899F956827B510CE00BFC9FA /* NotesLocalDataSource.swift */; };
 		899F956E27B5115100BFC9FA /* praxis-data.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 899F956C27B5115100BFC9FA /* praxis-data.xcdatamodeld */; };
 		899F957927B513F800BFC9FA /* NotesRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899F957827B513F800BFC9FA /* NotesRepositoryImpl.swift */; };
 		899F959D27B5306A00BFC9FA /* praxis_domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 899F959C27B5306A00BFC9FA /* praxis_domain.framework */; };
 		899F959E27B5306A00BFC9FA /* praxis_domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 899F959C27B5306A00BFC9FA /* praxis_domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		89A1751B27B55E84006B2333 /* CoreDataFetchResultsPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A1751A27B55E84006B2333 /* CoreDataFetchResultsPublisher.swift */; };
+		89A1751D27B56478006B2333 /* CoreDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A1751C27B56478006B2333 /* CoreDataStore.swift */; };
+		89A1752027B564CE006B2333 /* CoreDataDeleteModelPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A1751F27B564CE006B2333 /* CoreDataDeleteModelPublisher.swift */; };
+		89A1752227B564E6006B2333 /* CoreDataSaveModelPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A1752127B564E6006B2333 /* CoreDataSaveModelPublisher.swift */; };
+		89A1752527B56E10006B2333 /* EntityMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A1752427B56E10006B2333 /* EntityMapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,12 +52,16 @@
 		899F953F27B50CEE00BFC9FA /* praxis_data.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = praxis_data.docc; sourceTree = "<group>"; };
 		899F954527B50CEF00BFC9FA /* praxis-dataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "praxis-dataTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		899F954A27B50CEF00BFC9FA /* praxis_dataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = praxis_dataTests.swift; sourceTree = "<group>"; };
-		899F956827B510CE00BFC9FA /* NotesLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesLocalDataSource.swift; sourceTree = "<group>"; };
 		899F956D27B5115100BFC9FA /* NotesDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NotesDataModel.xcdatamodel; sourceTree = "<group>"; };
 		899F957827B513F800BFC9FA /* NotesRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesRepositoryImpl.swift; sourceTree = "<group>"; };
 		899F958727B525CA00BFC9FA /* praxis_domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = praxis_domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		899F958B27B5271400BFC9FA /* praxis_domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = praxis_domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		899F959C27B5306A00BFC9FA /* praxis_domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = praxis_domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		89A1751A27B55E84006B2333 /* CoreDataFetchResultsPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataFetchResultsPublisher.swift; sourceTree = "<group>"; };
+		89A1751C27B56478006B2333 /* CoreDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStore.swift; sourceTree = "<group>"; };
+		89A1751F27B564CE006B2333 /* CoreDataDeleteModelPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataDeleteModelPublisher.swift; sourceTree = "<group>"; };
+		89A1752127B564E6006B2333 /* CoreDataSaveModelPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataSaveModelPublisher.swift; sourceTree = "<group>"; };
+		89A1752427B56E10006B2333 /* EntityMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityMapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,8 +106,8 @@
 		899F953D27B50CEE00BFC9FA /* praxis-data */ = {
 			isa = PBXGroup;
 			children = (
+				89A1752327B56DFF006B2333 /* mapper */,
 				899F956C27B5115100BFC9FA /* praxis-data.xcdatamodeld */,
-				899F95DB27B53FF000BFC9FA /* models */,
 				899F957B27B5155100BFC9FA /* datasources */,
 				899F957A27B5154600BFC9FA /* repository */,
 				899F953E27B50CEE00BFC9FA /* praxis_data.h */,
@@ -137,16 +145,28 @@
 		899F957B27B5155100BFC9FA /* datasources */ = {
 			isa = PBXGroup;
 			children = (
-				899F956827B510CE00BFC9FA /* NotesLocalDataSource.swift */,
+				89A1751E27B564B5006B2333 /* coredata */,
 			);
 			path = datasources;
 			sourceTree = "<group>";
 		};
-		899F95DB27B53FF000BFC9FA /* models */ = {
+		89A1751E27B564B5006B2333 /* coredata */ = {
 			isa = PBXGroup;
 			children = (
+				89A1751C27B56478006B2333 /* CoreDataStore.swift */,
+				89A1751A27B55E84006B2333 /* CoreDataFetchResultsPublisher.swift */,
+				89A1751F27B564CE006B2333 /* CoreDataDeleteModelPublisher.swift */,
+				89A1752127B564E6006B2333 /* CoreDataSaveModelPublisher.swift */,
 			);
-			path = models;
+			path = coredata;
+			sourceTree = "<group>";
+		};
+		89A1752327B56DFF006B2333 /* mapper */ = {
+			isa = PBXGroup;
+			children = (
+				89A1752427B56E10006B2333 /* EntityMapper.swift */,
+			);
+			path = mapper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,10 +279,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				899F956927B510CE00BFC9FA /* NotesLocalDataSource.swift in Sources */,
+				89A1752227B564E6006B2333 /* CoreDataSaveModelPublisher.swift in Sources */,
+				89A1751D27B56478006B2333 /* CoreDataStore.swift in Sources */,
 				899F956E27B5115100BFC9FA /* praxis-data.xcdatamodeld in Sources */,
 				899F954027B50CEE00BFC9FA /* praxis_data.docc in Sources */,
+				89A1751B27B55E84006B2333 /* CoreDataFetchResultsPublisher.swift in Sources */,
 				899F957927B513F800BFC9FA /* NotesRepositoryImpl.swift in Sources */,
+				89A1752027B564CE006B2333 /* CoreDataDeleteModelPublisher.swift in Sources */,
+				89A1752527B56E10006B2333 /* EntityMapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

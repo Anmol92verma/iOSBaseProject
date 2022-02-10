@@ -44,8 +44,7 @@ struct NotesView: View {
     
     
     private func deleteItems(offsets: IndexSet) {
-
-       
+        self.viewModel.deleteNotes(offsets:offsets)
     }
     
     

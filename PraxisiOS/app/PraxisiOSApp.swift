@@ -10,11 +10,10 @@ import praxis_data
 
 @main
 struct PraxisiOSApp: App {
-    let context = NotesLocalDataSource.viewContext
 
     var body: some Scene {
         WindowGroup {
-            NotesView().environment(\.managedObjectContext, context)
+            NotesView()
         }
     }
 }

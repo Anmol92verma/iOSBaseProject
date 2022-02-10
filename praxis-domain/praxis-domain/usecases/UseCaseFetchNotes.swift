@@ -6,9 +6,9 @@
 //
 
 import Foundation
+import Combine
 
-
-public struct UseCaseFetchNotes : UseCase{
+public struct UseCaseFetchNotes : StreamingUseCase{
     typealias Param = Any
     typealias Result = [Note]
     
@@ -17,9 +17,14 @@ public struct UseCaseFetchNotes : UseCase{
     public init(notesRepository :NotesRepository) {
         self.notesRepository = notesRepository
     }
-
-    public  func perform(param: Any?) throws -> [Note] {
-        return try notesRepository.getNotes()
+    
+    public func performStreaming(param: Any?) -> AnyPublisher<[Note], NSError> {
+        return notesRepository.getNotes()
+    }
+    
+    func perform(param: Any?) throws -> [Note] {
+        print("not needed")
+        abort()
     }
     
 }

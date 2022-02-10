@@ -6,8 +6,9 @@
 //
 
 import Foundation
+import Combine
 
 public protocol NotesRepository {
-    func saveNote(note:Note) throws ->  Note
-    func getNotes() throws -> [Note]
+    func saveNote(note:Note) ->  AnyPublisher<Bool,NSError>
+    func getNotes() -> AnyPublisher<[Note],NSError>
 }

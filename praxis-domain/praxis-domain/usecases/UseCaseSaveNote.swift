@@ -8,17 +8,23 @@
 import Foundation
 import Combine
 
-public struct UseCaseSaveNote : UseCase{
+public struct UseCaseSaveNote : StreamingUseCase{
 
     typealias Param = Note
-    typealias Result = Note
+    typealias Result = Bool
     
     let notesRepository :NotesRepository
+    
     public init(notesRepository :NotesRepository) {
         self.notesRepository = notesRepository
     }
-    public  func perform(param: Note?) throws -> Note {
-        return try notesRepository.saveNote(note: param!)
+    
+    func perform(param: Note?) throws -> Bool {
+        abort()
+    }
+
+    public func performStreaming(param: Note?) -> AnyPublisher<Bool, NSError> {
+        return notesRepository.saveNote(note: param!)
     }
    
 }

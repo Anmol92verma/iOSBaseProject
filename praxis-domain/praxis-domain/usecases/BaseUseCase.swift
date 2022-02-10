@@ -16,7 +16,7 @@ protocol UseCase{
 }
 
 protocol StreamingUseCase : UseCase{
-    func performStreaming(param:Param?) throws -> AnyPublisher<Result,Error>
+    func performStreaming(param:Param?) throws -> AnyPublisher<Result,NSError>
 }
 
 

@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct Note : Identifiable{
+public class Note : Identifiable{
     public var id: UUID
     public var note: String
     public var date: Date

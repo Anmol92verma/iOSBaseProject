@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B07CD81496D774B83FC9ED7 /* Pods_PraxisiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA273587747C46D8BB6E1409 /* Pods_PraxisiOS.framework */; };
 		460E2817B2AD0FEA0C4D9719 /* Pods_PraxisiOS_PraxisiOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E64E084727E9DBF324B2897 /* Pods_PraxisiOS_PraxisiOSUITests.framework */; };
 		899F94D027B50AD300BFC9FA /* PraxisiOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899F94CF27B50AD300BFC9FA /* PraxisiOSApp.swift */; };
 		899F94D227B50AD300BFC9FA /* NotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899F94D127B50AD300BFC9FA /* NotesView.swift */; };
@@ -116,6 +117,7 @@
 			files = (
 				899F959727B52FDD00BFC9FA /* praxis_data.framework in Frameworks */,
 				899F959A27B52FDF00BFC9FA /* praxis_domain.framework in Frameworks */,
+				2B07CD81496D774B83FC9ED7 /* Pods_PraxisiOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

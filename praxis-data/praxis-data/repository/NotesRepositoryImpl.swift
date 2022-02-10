@@ -8,51 +8,36 @@
 import Foundation
 import praxis_domain
 import CoreData
+import Combine
 
 public struct NotesRepositoryImpl : NotesRepository{
-    public init() {}
-    public  func getNotes() throws -> [Note] {
-        var notes : [Note] = []
 
-        do{
-            let viewContext = NotesLocalDataSource.container.viewContext
-            let request: NSFetchRequest<NoteEntity> = NSFetchRequest<NoteEntity>(entityName: "NoteEntity")
-
-            let notesDB = try viewContext.fetch(request)
-            notesDB.forEach { NoteEntity in
-               
-                notes.append(Note.init(id: NoteEntity.id ?? UUID.init(), note: NoteEntity.note ?? "", date: NoteEntity.timestamp ?? Date()))
-            }
-        
-        }catch let error as NSError{
-            print("Could not fetch \(error)")
-
-        }
-        return notes
+    let mapper:EntityMapper<NoteEntity,Note>
+    
+    public init(entityMapper: EntityMapper<NoteEntity,Note>) {
+        self.mapper = entityMapper
     }
     
-    public  func saveNote(note: Note) -> Note {
-        let persistentContainer = NotesLocalDataSource.container
-        let context = persistentContainer.viewContext
-        let newItem = NoteEntity(context: context)
-        newItem.timestamp = note.date
-        newItem.note = note.note
-        newItem.id = note.id
-        
-        // 2
-        if context.hasChanges {
-          do {
-            // 3
-            try context.save()
-          } catch {
-            // 4
-            // The context couldn't be saved.
-            // You should add your own error handling here.
-            let nserror = error as NSError
-            fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
-          }
+    
+    public  func getNotes() -> AnyPublisher<[Note],NSError> {
+        let request: NSFetchRequest<NoteEntity> = NSFetchRequest<NoteEntity>(entityName: "NoteEntity")
+        return CoreDataStore.publisher(fetch: request).map { notesEntity in
+            
+           return notesEntity.map({ NoteEntity in
+                return mapper.mapToDomain(data: NoteEntity)
+            })
+        }.eraseToAnyPublisher()
+    }
+    
+    public  func saveNote(note: Note) -> AnyPublisher<Bool,NSError> {
+        let action:  Action = {
+            let newItem :NoteEntity =  CoreDataStore.createEntity()
+            newItem.timestamp = note.date
+            newItem.note = note.note
+            newItem.id = note.id
         }
-        return note
+        return CoreDataStore
+            .publisher(save: action).eraseToAnyPublisher()
     }
 
 }
