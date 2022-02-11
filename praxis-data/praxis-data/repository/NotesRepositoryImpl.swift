@@ -29,6 +29,15 @@ public struct NotesRepositoryImpl : NotesRepository{
         }.eraseToAnyPublisher()
     }
     
+    public func deleteNote(note: Note) -> AnyPublisher<Bool, NSError> {
+        let request: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest<NSFetchRequestResult>(entityName: "NoteEntity")
+        request.predicate = NSPredicate(format: "id == '\(note.id.uuidString)'")
+        return CoreDataStore
+            .publisher(delete: request).map { result in
+                return true
+            }.eraseToAnyPublisher()
+    }
+    
     public  func saveNote(note: Note) -> AnyPublisher<Bool,NSError> {
         let action:  Action = {
             let newItem :NoteEntity =  CoreDataStore.createEntity()

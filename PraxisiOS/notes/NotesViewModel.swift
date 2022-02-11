@@ -28,7 +28,13 @@ class NotesVM : ObservableObject{
     }
     
     func deleteNotes(offsets: IndexSet){
-        print(offsets.first)
+        let toDelete = offsets.map { notes[$0] }.first
+        UseCaseDeleteNote(notesRepository:notesRepo).performStreaming(param: toDelete!).receive(on: DispatchQueue.main)
+            .sink(receiveCompletion: { err in
+                print(err)
+        }, receiveValue: { isSaved in
+            self.fetchNotes()
+        }).store(in: &bag)
         
     }
                                 
