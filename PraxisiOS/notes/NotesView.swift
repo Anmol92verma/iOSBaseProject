@@ -16,11 +16,11 @@ struct NotesView: View {
     var body: some View {
         NavigationView {
             List {
-                ForEach(viewModel.notes.indices,id:\.self) { index in
+                ForEach(viewModel.notes) { note in
                         NavigationLink {
-                            Text(self.viewModel.notes[index].note)
+                            Text(note.note)
                         } label: {
-                            Text(self.viewModel.notes[index].date, formatter: itemFormatter)
+                            Text(note.date, formatter: itemFormatter)
                         }
                     }
                     .onDelete(perform: deleteItems)
