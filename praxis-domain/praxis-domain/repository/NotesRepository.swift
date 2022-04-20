@@ -7,9 +7,10 @@
 
 import Foundation
 import Combine
+import CoreData
 
 public protocol NotesRepository {
     func saveNote(note:Note) ->  AnyPublisher<Bool,NSError>
     func getNotes() -> AnyPublisher<[Note],NSError>
-    func deleteNote(note:Note) ->  AnyPublisher<Bool,NSError>
+    func deleteNote(note:Note)->  AnyPublisher<NSBatchDeleteResult,NSError>
 }

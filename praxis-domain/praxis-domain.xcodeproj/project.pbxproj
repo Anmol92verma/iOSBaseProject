@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		896E30E22810423500AF9BDC /* UseCaseDeleteNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896E30E12810423500AF9BDC /* UseCaseDeleteNote.swift */; };
 		899F950D27B50B3300BFC9FA /* praxis_domain.docc in Sources */ = {isa = PBXBuildFile; fileRef = 899F950C27B50B3300BFC9FA /* praxis_domain.docc */; };
 		899F951327B50B3300BFC9FA /* praxis_domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 899F950827B50B3300BFC9FA /* praxis_domain.framework */; };
 		899F951827B50B3300BFC9FA /* praxis_domainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899F951727B50B3300BFC9FA /* praxis_domainTests.swift */; };
@@ -30,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		896E30E12810423500AF9BDC /* UseCaseDeleteNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseDeleteNote.swift; sourceTree = "<group>"; };
 		899F950827B50B3300BFC9FA /* praxis_domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = praxis_domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		899F950B27B50B3300BFC9FA /* praxis_domain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = praxis_domain.h; sourceTree = "<group>"; };
 		899F950C27B50B3300BFC9FA /* praxis_domain.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = praxis_domain.docc; sourceTree = "<group>"; };
@@ -106,7 +108,7 @@
 				899F952227B50B4E00BFC9FA /* BaseUseCase.swift */,
 				899F956627B50D6500BFC9FA /* UseCaseSaveNote.swift */,
 				899F959527B52DBF00BFC9FA /* UseCaseFetchNotes.swift */,
-				89A1A70927B6200600D900A6 /* UseCaseDeleteNote.swift */,
+				896E30E12810423500AF9BDC /* UseCaseDeleteNote.swift */,
 			);
 			path = usecases;
 			sourceTree = "<group>";
@@ -241,7 +243,7 @@
 				899F959627B52DBF00BFC9FA /* UseCaseFetchNotes.swift in Sources */,
 				899F952327B50B4E00BFC9FA /* BaseUseCase.swift in Sources */,
 				899F950D27B50B3300BFC9FA /* praxis_domain.docc in Sources */,
-				89A1A70A27B6200600D900A6 /* UseCaseDeleteNote.swift in Sources */,
+				896E30E22810423500AF9BDC /* UseCaseDeleteNote.swift in Sources */,
 				899F957327B512C700BFC9FA /* Note.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -394,7 +396,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = P3R865242N;
+				DEVELOPMENT_TEAM = S4G3GQXM69;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -423,7 +425,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = P3R865242N;
+				DEVELOPMENT_TEAM = S4G3GQXM69;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";

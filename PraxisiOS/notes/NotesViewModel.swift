@@ -15,27 +15,36 @@ class NotesVM : ObservableObject{
     @Published var notes :[Note] = []
     var bag: [AnyCancellable] = []
     var fetchCancellable : AnyCancellable? = nil
+    var saveNoteCancellable: AnyCancellable? = nil
 
     let notesRepo : NotesRepository = NotesRepositoryImpl(entityMapper: NoteEntityMapper())
     
     func saveNote(){
-        UseCaseSaveNote(notesRepository : notesRepo).performStreaming(param: Note(id: UUID.init(), note: "sdfsdf", date: Date())).receive(on: DispatchQueue.main)
+        saveNoteCancellable?.cancel()
+        saveNoteCancellable =  UseCaseSaveNote(notesRepository : notesRepo).performStreaming(param: Note(id: UUID.init(), note: "sdfsdf", date: Date())).receive(on: DispatchQueue.main)
                   .sink(receiveCompletion: { err in
                   
               }, receiveValue: { isSaved in
                   self.fetchNotes()
-              }).store(in: &bag)
+              })
+        saveNoteCancellable?.store(in: &bag)
     }
     
     func deleteNotes(offsets: IndexSet){
-        let toDelete = offsets.map { notes[$0] }.first
-        UseCaseDeleteNote(notesRepository:notesRepo).performStreaming(param: toDelete!).receive(on: DispatchQueue.main)
-            .sink(receiveCompletion: { err in
-                print(err)
-        }, receiveValue: { isSaved in
-            self.fetchNotes()
-        }).store(in: &bag)
-        
+        offsets.forEach { offset in
+            do {
+                try UseCaseDeleteNote(notesRepository: notesRepo)
+                    .performStreaming(param: notes[offset]).receive(on: DispatchQueue.main)
+                    .sink(receiveCompletion: { err in
+                    
+                }, receiveValue: { isSaved in
+                   
+                })
+            } catch _ {
+                // error handling
+            }
+        }
+        self.notes.remove(atOffsets: offsets)
     }
                                 
     func fetchNotes(){
