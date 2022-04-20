@@ -19,7 +19,7 @@ struct ViewJokesForCategory : View{
         VStack{
             Text(randomJokeVM.randomJoke?.value ?? "").onAppear {
                 randomJokeVM.fetchJoke(category:category)
-            }.font(.largeTitle)
+            }.font(.largeTitle).padding()
             
             Button {
                 randomJokeVM.fetchJoke(category:category)

@@ -14,6 +14,7 @@
 		8947BFB42810731400248070 /* ViewJokesForCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8947BFB32810731400248070 /* ViewJokesForCategory.swift */; };
 		8947BFB6281076BE00248070 /* RandomJokeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8947BFB5281076BE00248070 /* RandomJokeVM.swift */; };
 		8947BFB82810787F00248070 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 8947BFB72810787F00248070 /* README.md */; };
+		8947BFBA28107A2300248070 /* PraxisModules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8947BFB928107A2300248070 /* PraxisModules.swift */; };
 		899F94D027B50AD300BFC9FA /* PraxisiOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899F94CF27B50AD300BFC9FA /* PraxisiOSApp.swift */; };
 		899F94D227B50AD300BFC9FA /* NotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899F94D127B50AD300BFC9FA /* NotesView.swift */; };
 		899F94D427B50AD400BFC9FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 899F94D327B50AD400BFC9FA /* Assets.xcassets */; };
@@ -98,6 +99,7 @@
 		8947BFB32810731400248070 /* ViewJokesForCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewJokesForCategory.swift; sourceTree = "<group>"; };
 		8947BFB5281076BE00248070 /* RandomJokeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomJokeVM.swift; sourceTree = "<group>"; };
 		8947BFB72810787F00248070 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		8947BFB928107A2300248070 /* PraxisModules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PraxisModules.swift; sourceTree = "<group>"; };
 		899F94CC27B50AD300BFC9FA /* PraxisiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PraxisiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		899F94CF27B50AD300BFC9FA /* PraxisiOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PraxisiOSApp.swift; sourceTree = "<group>"; };
 		899F94D127B50AD300BFC9FA /* NotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesView.swift; sourceTree = "<group>"; };
@@ -265,6 +267,7 @@
 			isa = PBXGroup;
 			children = (
 				899F94CF27B50AD300BFC9FA /* PraxisiOSApp.swift */,
+				8947BFB928107A2300248070 /* PraxisModules.swift */,
 			);
 			path = app;
 			sourceTree = "<group>";
@@ -533,6 +536,7 @@
 				899F94D227B50AD300BFC9FA /* NotesView.swift in Sources */,
 				8947BFB6281076BE00248070 /* RandomJokeVM.swift in Sources */,
 				899F94D027B50AD300BFC9FA /* PraxisiOSApp.swift in Sources */,
+				8947BFBA28107A2300248070 /* PraxisModules.swift in Sources */,
 				8947BFB22810728D00248070 /* JokesVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
