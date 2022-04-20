@@ -12,6 +12,7 @@ public struct UseCaseSaveNote : StreamingUseCase{
 
     typealias Param = Note
     typealias Result = Bool
+    typealias ErrorType = NSError
     
     let notesRepository :NotesRepository
     

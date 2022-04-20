@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8947BFA328106ADC00248070 /* JokeRepoImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8947BFA228106ADC00248070 /* JokeRepoImpl.swift */; };
+		8947BFA528106B5F00248070 /* JokesApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8947BFA428106B5F00248070 /* JokesApi.swift */; };
 		899F954027B50CEE00BFC9FA /* praxis_data.docc in Sources */ = {isa = PBXBuildFile; fileRef = 899F953F27B50CEE00BFC9FA /* praxis_data.docc */; };
 		899F954627B50CEF00BFC9FA /* praxis_data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 899F953B27B50CEE00BFC9FA /* praxis_data.framework */; };
 		899F954B27B50CEF00BFC9FA /* praxis_dataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899F954A27B50CEF00BFC9FA /* praxis_dataTests.swift */; };
@@ -47,6 +49,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8947BFA228106ADC00248070 /* JokeRepoImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeRepoImpl.swift; sourceTree = "<group>"; };
+		8947BFA428106B5F00248070 /* JokesApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokesApi.swift; sourceTree = "<group>"; };
 		899F953B27B50CEE00BFC9FA /* praxis_data.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = praxis_data.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		899F953E27B50CEE00BFC9FA /* praxis_data.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = praxis_data.h; sourceTree = "<group>"; };
 		899F953F27B50CEE00BFC9FA /* praxis_data.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = praxis_data.docc; sourceTree = "<group>"; };
@@ -84,6 +88,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8947BF9528105E7400248070 /* network */ = {
+			isa = PBXGroup;
+			children = (
+				8947BFA428106B5F00248070 /* JokesApi.swift */,
+			);
+			path = network;
+			sourceTree = "<group>";
+		};
 		899F953127B50CEE00BFC9FA = {
 			isa = PBXGroup;
 			children = (
@@ -138,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				899F957827B513F800BFC9FA /* NotesRepositoryImpl.swift */,
+				8947BFA228106ADC00248070 /* JokeRepoImpl.swift */,
 			);
 			path = repository;
 			sourceTree = "<group>";
@@ -145,6 +158,7 @@
 		899F957B27B5155100BFC9FA /* datasources */ = {
 			isa = PBXGroup;
 			children = (
+				8947BF9528105E7400248070 /* network */,
 				89A1751E27B564B5006B2333 /* coredata */,
 			);
 			path = datasources;
@@ -282,7 +296,9 @@
 				89A1752227B564E6006B2333 /* CoreDataSaveModelPublisher.swift in Sources */,
 				89A1751D27B56478006B2333 /* CoreDataStore.swift in Sources */,
 				899F956E27B5115100BFC9FA /* praxis-data.xcdatamodeld in Sources */,
+				8947BFA528106B5F00248070 /* JokesApi.swift in Sources */,
 				899F954027B50CEE00BFC9FA /* praxis_data.docc in Sources */,
+				8947BFA328106ADC00248070 /* JokeRepoImpl.swift in Sources */,
 				89A1751B27B55E84006B2333 /* CoreDataFetchResultsPublisher.swift in Sources */,
 				899F957927B513F800BFC9FA /* NotesRepositoryImpl.swift in Sources */,
 				89A1752027B564CE006B2333 /* CoreDataDeleteModelPublisher.swift in Sources */,

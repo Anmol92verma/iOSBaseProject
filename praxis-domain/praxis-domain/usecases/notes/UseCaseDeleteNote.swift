@@ -15,7 +15,8 @@ public struct UseCaseDeleteNote : StreamingUseCase{
 
     typealias Param = Note
     typealias Result = NSBatchDeleteResult
-    
+    typealias ErrorType = NSError
+
     let notesRepository :NotesRepository
     
     public init(notesRepository :NotesRepository) {

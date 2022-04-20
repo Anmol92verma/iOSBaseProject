@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8947BF9928105F0A00248070 /* JokesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8947BF9828105F0A00248070 /* JokesRepository.swift */; };
+		8947BF9B2810684D00248070 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8947BF9A2810684D00248070 /* Categories.swift */; };
+		8947BF9F281069AF00248070 /* UseCaseFetchJokeCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8947BF9E281069AF00248070 /* UseCaseFetchJokeCategories.swift */; };
+		8947BFA128106A6A00248070 /* UseCaseFetchJokesForCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8947BFA028106A6A00248070 /* UseCaseFetchJokesForCategory.swift */; };
+		8947BFA728106E0500248070 /* RandomJokeFromCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8947BFA628106E0500248070 /* RandomJokeFromCategory.swift */; };
+		8947BFA928106FDD00248070 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8947BFA828106FDD00248070 /* APIError.swift */; };
 		896E30E22810423500AF9BDC /* UseCaseDeleteNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896E30E12810423500AF9BDC /* UseCaseDeleteNote.swift */; };
 		899F950D27B50B3300BFC9FA /* praxis_domain.docc in Sources */ = {isa = PBXBuildFile; fileRef = 899F950C27B50B3300BFC9FA /* praxis_domain.docc */; };
 		899F951327B50B3300BFC9FA /* praxis_domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 899F950827B50B3300BFC9FA /* praxis_domain.framework */; };
@@ -17,7 +23,6 @@
 		899F957327B512C700BFC9FA /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899F957227B512C700BFC9FA /* Note.swift */; };
 		899F957727B513A700BFC9FA /* NotesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899F957627B513A700BFC9FA /* NotesRepository.swift */; };
 		899F959627B52DBF00BFC9FA /* UseCaseFetchNotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899F959527B52DBF00BFC9FA /* UseCaseFetchNotes.swift */; };
-		89A1A70A27B6200600D900A6 /* UseCaseDeleteNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A1A70927B6200600D900A6 /* UseCaseDeleteNote.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +36,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8947BF9828105F0A00248070 /* JokesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokesRepository.swift; sourceTree = "<group>"; };
+		8947BF9A2810684D00248070 /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
+		8947BF9E281069AF00248070 /* UseCaseFetchJokeCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseFetchJokeCategories.swift; sourceTree = "<group>"; };
+		8947BFA028106A6A00248070 /* UseCaseFetchJokesForCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseFetchJokesForCategory.swift; sourceTree = "<group>"; };
+		8947BFA628106E0500248070 /* RandomJokeFromCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomJokeFromCategory.swift; sourceTree = "<group>"; };
+		8947BFA828106FDD00248070 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		896E30E12810423500AF9BDC /* UseCaseDeleteNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseDeleteNote.swift; sourceTree = "<group>"; };
 		899F950827B50B3300BFC9FA /* praxis_domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = praxis_domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		899F950B27B50B3300BFC9FA /* praxis_domain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = praxis_domain.h; sourceTree = "<group>"; };
@@ -42,7 +53,6 @@
 		899F957227B512C700BFC9FA /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		899F957627B513A700BFC9FA /* NotesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesRepository.swift; sourceTree = "<group>"; };
 		899F959527B52DBF00BFC9FA /* UseCaseFetchNotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseFetchNotes.swift; sourceTree = "<group>"; };
-		89A1A70927B6200600D900A6 /* UseCaseDeleteNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseDeleteNote.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +74,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8947BF9C2810699900248070 /* notes */ = {
+			isa = PBXGroup;
+			children = (
+				899F956627B50D6500BFC9FA /* UseCaseSaveNote.swift */,
+				899F959527B52DBF00BFC9FA /* UseCaseFetchNotes.swift */,
+				896E30E12810423500AF9BDC /* UseCaseDeleteNote.swift */,
+			);
+			path = notes;
+			sourceTree = "<group>";
+		};
+		8947BF9D281069A100248070 /* jokes */ = {
+			isa = PBXGroup;
+			children = (
+				8947BF9E281069AF00248070 /* UseCaseFetchJokeCategories.swift */,
+				8947BFA028106A6A00248070 /* UseCaseFetchJokesForCategory.swift */,
+			);
+			path = jokes;
+			sourceTree = "<group>";
+		};
 		899F94FE27B50B3300BFC9FA = {
 			isa = PBXGroup;
 			children = (
@@ -105,10 +134,9 @@
 		899F956527B50D3B00BFC9FA /* usecases */ = {
 			isa = PBXGroup;
 			children = (
+				8947BF9D281069A100248070 /* jokes */,
+				8947BF9C2810699900248070 /* notes */,
 				899F952227B50B4E00BFC9FA /* BaseUseCase.swift */,
-				899F956627B50D6500BFC9FA /* UseCaseSaveNote.swift */,
-				899F959527B52DBF00BFC9FA /* UseCaseFetchNotes.swift */,
-				896E30E12810423500AF9BDC /* UseCaseDeleteNote.swift */,
 			);
 			path = usecases;
 			sourceTree = "<group>";
@@ -117,6 +145,9 @@
 			isa = PBXGroup;
 			children = (
 				899F957227B512C700BFC9FA /* Note.swift */,
+				8947BF9A2810684D00248070 /* Categories.swift */,
+				8947BFA628106E0500248070 /* RandomJokeFromCategory.swift */,
+				8947BFA828106FDD00248070 /* APIError.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -125,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				899F957627B513A700BFC9FA /* NotesRepository.swift */,
+				8947BF9828105F0A00248070 /* JokesRepository.swift */,
 			);
 			path = repository;
 			sourceTree = "<group>";
@@ -242,9 +274,15 @@
 				899F957727B513A700BFC9FA /* NotesRepository.swift in Sources */,
 				899F959627B52DBF00BFC9FA /* UseCaseFetchNotes.swift in Sources */,
 				899F952327B50B4E00BFC9FA /* BaseUseCase.swift in Sources */,
+				8947BF9928105F0A00248070 /* JokesRepository.swift in Sources */,
 				899F950D27B50B3300BFC9FA /* praxis_domain.docc in Sources */,
+				8947BF9F281069AF00248070 /* UseCaseFetchJokeCategories.swift in Sources */,
 				896E30E22810423500AF9BDC /* UseCaseDeleteNote.swift in Sources */,
+				8947BF9B2810684D00248070 /* Categories.swift in Sources */,
 				899F957327B512C700BFC9FA /* Note.swift in Sources */,
+				8947BFA128106A6A00248070 /* UseCaseFetchJokesForCategory.swift in Sources */,
+				8947BFA728106E0500248070 /* RandomJokeFromCategory.swift in Sources */,
+				8947BFA928106FDD00248070 /* APIError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

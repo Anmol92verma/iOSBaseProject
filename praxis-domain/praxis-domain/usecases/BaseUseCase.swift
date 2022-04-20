@@ -11,12 +11,12 @@ import Combine
 protocol UseCase{
     associatedtype Param
     associatedtype Result
-    
+    associatedtype ErrorType : Error
     func perform(param:Param?) throws -> Result
 }
 
 protocol StreamingUseCase : UseCase{
-    func performStreaming(param:Param?) throws -> AnyPublisher<Result,NSError>
+    func performStreaming(param:Param?) throws -> AnyPublisher<Result,ErrorType>
 }
 
 

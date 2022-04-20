@@ -11,7 +11,8 @@ import Combine
 public struct UseCaseFetchNotes : StreamingUseCase{
     typealias Param = Any
     typealias Result = [Note]
-    
+    typealias ErrorType = NSError
+
     let notesRepository : NotesRepository
     
     public init(notesRepository :NotesRepository) {
