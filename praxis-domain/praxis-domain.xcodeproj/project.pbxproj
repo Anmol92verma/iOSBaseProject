@@ -17,6 +17,7 @@
 		899F957327B512C700BFC9FA /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899F957227B512C700BFC9FA /* Note.swift */; };
 		899F957727B513A700BFC9FA /* NotesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899F957627B513A700BFC9FA /* NotesRepository.swift */; };
 		899F959627B52DBF00BFC9FA /* UseCaseFetchNotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899F959527B52DBF00BFC9FA /* UseCaseFetchNotes.swift */; };
+		89A1A70A27B6200600D900A6 /* UseCaseDeleteNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A1A70927B6200600D900A6 /* UseCaseDeleteNote.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +42,7 @@
 		899F957227B512C700BFC9FA /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		899F957627B513A700BFC9FA /* NotesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesRepository.swift; sourceTree = "<group>"; };
 		899F959527B52DBF00BFC9FA /* UseCaseFetchNotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseFetchNotes.swift; sourceTree = "<group>"; };
+		89A1A70927B6200600D900A6 /* UseCaseDeleteNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseDeleteNote.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */

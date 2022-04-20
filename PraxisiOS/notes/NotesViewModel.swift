@@ -45,7 +45,6 @@ class NotesVM : ObservableObject{
             }
         }
         self.notes.remove(atOffsets: offsets)
-
     }
                                 
     func fetchNotes(){
