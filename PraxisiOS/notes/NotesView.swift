@@ -26,6 +26,11 @@ struct NotesView: View {
                     .onDelete(perform: deleteItems)
             }
             .toolbar {
+                ToolbarItem(placement: .principal) {
+                        Text("My Notes")
+                            .font(.largeTitle.bold())
+                            .accessibilityAddTraits(.isHeader)
+                    }
                 ToolbarItem {
                     Button(action: addItem) {
                         Label("Add Item", systemImage: "plus")
@@ -34,8 +39,8 @@ struct NotesView: View {
             }.onAppear {
                 viewModel.fetchNotes()
             }
-            Text("Select an item")
-        }
+            Text("Select a Note")
+        }.navigationTitle("Praxis Notes")
     }
 
     private func addItem() {

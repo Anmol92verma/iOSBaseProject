@@ -29,7 +29,7 @@ public class RandomJokeFromCategory: Codable {
     let iconURL: String
     let id, updatedAt: String
     let url: String
-    let value: String
+    public let value: String
 
     enum CodingKeys: String, CodingKey {
         case categories

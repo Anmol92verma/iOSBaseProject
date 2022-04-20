@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		2B07CD81496D774B83FC9ED7 /* Pods_PraxisiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA273587747C46D8BB6E1409 /* Pods_PraxisiOS.framework */; };
 		460E2817B2AD0FEA0C4D9719 /* Pods_PraxisiOS_PraxisiOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E64E084727E9DBF324B2897 /* Pods_PraxisiOS_PraxisiOSUITests.framework */; };
+		8947BFB02810728500248070 /* JokesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8947BFAF2810728500248070 /* JokesView.swift */; };
+		8947BFB22810728D00248070 /* JokesVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8947BFB12810728D00248070 /* JokesVM.swift */; };
+		8947BFB42810731400248070 /* ViewJokesForCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8947BFB32810731400248070 /* ViewJokesForCategory.swift */; };
+		8947BFB6281076BE00248070 /* RandomJokeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8947BFB5281076BE00248070 /* RandomJokeVM.swift */; };
 		899F94D027B50AD300BFC9FA /* PraxisiOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899F94CF27B50AD300BFC9FA /* PraxisiOSApp.swift */; };
 		899F94D227B50AD300BFC9FA /* NotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899F94D127B50AD300BFC9FA /* NotesView.swift */; };
 		899F94D427B50AD400BFC9FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 899F94D327B50AD400BFC9FA /* Assets.xcassets */; };
@@ -88,6 +92,10 @@
 		3A13DBD9F039A4CD1D87C4EE /* Pods-PraxisiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PraxisiOS.debug.xcconfig"; path = "Target Support Files/Pods-PraxisiOS/Pods-PraxisiOS.debug.xcconfig"; sourceTree = "<group>"; };
 		5DBB16EA82551F2050AFB8BC /* Pods-PraxisiOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PraxisiOSTests.release.xcconfig"; path = "Target Support Files/Pods-PraxisiOSTests/Pods-PraxisiOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		8198488239ED6EA70E1C443C /* Pods-PraxisiOS-PraxisiOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PraxisiOS-PraxisiOSUITests.release.xcconfig"; path = "Target Support Files/Pods-PraxisiOS-PraxisiOSUITests/Pods-PraxisiOS-PraxisiOSUITests.release.xcconfig"; sourceTree = "<group>"; };
+		8947BFAF2810728500248070 /* JokesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokesView.swift; sourceTree = "<group>"; };
+		8947BFB12810728D00248070 /* JokesVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokesVM.swift; sourceTree = "<group>"; };
+		8947BFB32810731400248070 /* ViewJokesForCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewJokesForCategory.swift; sourceTree = "<group>"; };
+		8947BFB5281076BE00248070 /* RandomJokeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomJokeVM.swift; sourceTree = "<group>"; };
 		899F94CC27B50AD300BFC9FA /* PraxisiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PraxisiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		899F94CF27B50AD300BFC9FA /* PraxisiOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PraxisiOSApp.swift; sourceTree = "<group>"; };
 		899F94D127B50AD300BFC9FA /* NotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesView.swift; sourceTree = "<group>"; };
@@ -140,6 +148,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8947BFAA2810727900248070 /* jokes */ = {
+			isa = PBXGroup;
+			children = (
+				8947BFAF2810728500248070 /* JokesView.swift */,
+				8947BFB12810728D00248070 /* JokesVM.swift */,
+				8947BFB32810731400248070 /* ViewJokesForCategory.swift */,
+				8947BFB5281076BE00248070 /* RandomJokeVM.swift */,
+			);
+			path = jokes;
+			sourceTree = "<group>";
+		};
 		899F94C327B50AD300BFC9FA = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +186,7 @@
 		899F94CE27B50AD300BFC9FA /* PraxisiOS */ = {
 			isa = PBXGroup;
 			children = (
+				8947BFAA2810727900248070 /* jokes */,
 				899F958F27B5273700BFC9FA /* Info.plist */,
 				899F957C27B515F300BFC9FA /* app */,
 				899F957427B512F200BFC9FA /* notes */,
@@ -504,8 +524,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				899F958027B521C200BFC9FA /* NotesViewModel.swift in Sources */,
+				8947BFB42810731400248070 /* ViewJokesForCategory.swift in Sources */,
+				8947BFB02810728500248070 /* JokesView.swift in Sources */,
 				899F94D227B50AD300BFC9FA /* NotesView.swift in Sources */,
+				8947BFB6281076BE00248070 /* RandomJokeVM.swift in Sources */,
 				899F94D027B50AD300BFC9FA /* PraxisiOSApp.swift in Sources */,
+				8947BFB22810728D00248070 /* JokesVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

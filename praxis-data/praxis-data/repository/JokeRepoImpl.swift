@@ -14,6 +14,10 @@ let jokeCategories = "https://api.chucknorris.io/jokes/categories"
 let randomJoke = "https://api.chucknorris.io/jokes/random?category="
 
 public struct JokeRepoImpl : JokesRepository{
+    
+    public init() {}
+
+    
     public func fetchJokeCategories() -> AnyPublisher<Categories, APIError> {
         return URLSession.shared.categoriesTask(with: URL(string: jokeCategories)!)
     }

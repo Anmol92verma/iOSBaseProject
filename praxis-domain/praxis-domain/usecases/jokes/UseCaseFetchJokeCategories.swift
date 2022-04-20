@@ -20,11 +20,11 @@ public struct UseCaseFetchJokeCategories : StreamingUseCase{
         self.jokeRepo = jokesRepo
     }
     
-    func performStreaming(param: Any?) throws -> AnyPublisher<Categories, APIError> {
+   public func performStreaming(param: Any?) throws -> AnyPublisher<Categories, APIError> {
         return jokeRepo.fetchJokeCategories()
     }
     
-    func perform(param: Any?) throws -> Categories {
+   public func perform(param: Any?) throws -> Categories {
         abort()
     }
 }

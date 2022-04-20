@@ -13,7 +13,7 @@ struct PraxisiOSApp: App {
 
     var body: some Scene {
         WindowGroup {
-            NotesView()
+            JokesView()
         }
     }
 }

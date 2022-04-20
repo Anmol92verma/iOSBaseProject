@@ -9,7 +9,7 @@ import Foundation
 import Combine
 
 public struct UseCaseFetchJokesForCategory : StreamingUseCase{
-    func perform(param: String?) throws -> RandomJokeFromCategory {
+    public func perform(param: String?) throws -> RandomJokeFromCategory {
         abort()
     }
     
@@ -24,7 +24,7 @@ public struct UseCaseFetchJokesForCategory : StreamingUseCase{
         self.jokeRepo = jokesRepo
     }
     
-    func performStreaming(param: String?) throws -> AnyPublisher<RandomJokeFromCategory, APIError> {
+    public func performStreaming(param: String?) throws -> AnyPublisher<RandomJokeFromCategory, APIError> {
         return jokeRepo.fetchJokeForCategory(category: param!)
     }
     
